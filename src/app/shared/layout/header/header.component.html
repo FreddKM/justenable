@@ -36,7 +36,7 @@
           [ngClass]="{ selected: selected === lang }"
           (click)="setLanguage(lang)"
         >
-          <h5>{{ "LANGUAGE." + lang | translate }}</h5>
+          <h5>{{ "LANGUAGE." + lang.toLocaleUpperCase() | translate }}</h5>
         </li>
       </ul>
     </div>
