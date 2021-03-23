@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.selected = this.languages[0];
+    this.selected = this.languages[1];
   }
 
   setLanguage(language: string) {

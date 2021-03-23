@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  languages: ['EN', 'FR', 'SW'],
+  languages: ['AF', 'EN', 'FR', 'SW', 'ZU'],
 };
 
 /*
