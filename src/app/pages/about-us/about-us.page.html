@@ -3,9 +3,7 @@
   <div>
     <div [ngClass]="section.bgColor" *ngFor="let section of sections">
       <div>
-        <ng-lottie
-          [options]="{ path: section.image }"
-        ></ng-lottie>
+        <ng-lottie [options]="{ path: section.image }"></ng-lottie>
       </div>
       <h1>{{ section.title| translate }}</h1>
       <p [innerHTML]="section.text | translate"></p>
