@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
+import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,9 @@ export class HomePage {
     path: '/assets/animation/coding.json',
   };
 
-  constructor() {}
+  constructor(private titleService: UtilsService) {
+    this.titleService.setTitle('NAVIGATION.HOME');
+
+  }
+
 }

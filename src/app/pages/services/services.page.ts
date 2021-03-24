@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @Component({
   selector: 'app-services',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.page.scss'],
 })
 export class ServicesPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private titleService: UtilsService) {
+    this.titleService.setTitle('NAVIGATION.SERVICES');
   }
 
+  ngOnInit() {}
 }

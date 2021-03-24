@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @Component({
   selector: 'app-about-us',
@@ -30,7 +33,9 @@ export class AboutUsPage implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private titleService: UtilsService) {
+    this.titleService.setTitle('NAVIGATION.ABOUT_US');
+  }
 
   ngOnInit() {}
 }

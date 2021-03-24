@@ -9,6 +9,7 @@ import { LottieModule } from 'ngx-lottie';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ClickElsewhereDirective } from './directives/click-elsewhere.directive';
+import { UtilsService } from './services/utils.service';
 
 const declarations = [FooterComponent, HeaderComponent, ClickElsewhereDirective];
 const imports = [
@@ -31,7 +32,7 @@ export class SharedModule {
   static forRoot() {
     return {
       ngModule: SharedModule,
-      providers: [],
+      providers: [UtilsService],
     };
   }
 }
