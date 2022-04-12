@@ -12,7 +12,6 @@ export class UtilsService {
   ) {}
 
   public setTitle(title: string) {
-    console.log(title, '%%%');
     this.translate
       .get(title)
       .subscribe((title) =>
