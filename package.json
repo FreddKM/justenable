@@ -1,8 +1,8 @@
 {
   "name": "just-enable",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "Just Enable",
+  "homepage": "https://jstenable.com",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:prod": "cross-env NODE_ENV=production npm run build",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
