@@ -12,7 +12,7 @@ ion-footer {
               a {
                 @apply text-gray-400 transition hover:text-amber-500;
                 ion-icon {
-                  @apply transition transform hover:scale-110;
+                  @apply transition hover:scale-110;
                 }
               }
             }

@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  navigation = [
+  navigation: any[] = [
     {
       title: 'NAVIGATION.HOME',
       url: '',
@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   ];
 
   languages = environment.languages;
-  selected: string;
+  selected: string = '';
   hideLanguageList: boolean = true;
   showMenu: boolean = false;
 

@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
-  handle: 'just-enable';
-  phone: 'just-enable';
+export class FooterComponent {
+  handle: string = 'just-enable';
+  phone: string = 'just-enable';
   socialMedia: any[];
-  currentYear;
+  currentYear: number;
   policies = [
     {
       title: 'POLICY.TERMS_CONDITIONS',
@@ -26,9 +26,10 @@ export class FooterComponent implements OnInit {
     {
       title: 'POLICY.ACCESSIBILITY',
       url: '/accessibility',
-    }
+    },
   ];
   constructor() {
+    this.currentYear = new Date().getFullYear();
     this.socialMedia = [
       {
         icon: 'logo-facebook',
@@ -51,9 +52,5 @@ export class FooterComponent implements OnInit {
         url: 'linkedin.com/' + this.handle,
       },
     ];
-  }
-
-  ngOnInit() {
-    this.currentYear = new Date().getFullYear();
   }
 }

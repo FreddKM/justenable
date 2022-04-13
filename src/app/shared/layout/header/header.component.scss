@@ -13,7 +13,7 @@ div.navigation {
     @apply w-full flex justify-end;
     ul {
       top: 52px;
-      @apply bg-white w-9/12 right-0 lg:w-full z-20 absolute lg:top-auto lg:static lg:flex flex-row justify-around max-w-screen-lg transition-transform transform translate-x-full lg:transform-none;
+      @apply bg-white w-9/12 right-0 lg:w-full z-20 absolute lg:top-auto lg:static lg:flex flex-row justify-around max-w-screen-lg transition-transform translate-x-full lg:transform-none;
       li {
         @apply w-full;
         a {
@@ -73,7 +73,7 @@ div.navigation {
         }
 
         ion-icon.rotate {
-          @apply transform rotate-180;
+          @apply rotate-180;
         }
       }
 
@@ -96,7 +96,7 @@ div.navigation {
       }
 
       ul.hidden {
-        @apply transform -translate-y-48;
+        @apply -translate-y-48;
       }
     }
   }
