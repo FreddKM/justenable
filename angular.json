@@ -37,9 +37,7 @@
           },
           "configurations": {
             "production": {
-              "optimization": {
-                "styles": false
-              },
+              "optimization": true,
               "sourceMap": true,
               "namedChunks": true,
               "aot": true,
@@ -54,7 +52,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "10bk",
+                  "maximumWarning": "10kb",
                   "maximumError": "20kb"
                 }
               ],
