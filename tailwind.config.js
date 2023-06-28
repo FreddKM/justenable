@@ -1,4 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ["./src/**/*.{html,ts}"],
@@ -10,6 +12,12 @@ module.exports = {
         orange: colors.orange,
         amber: colors.amber,
       },
+    },
+    screens: {
+      'xxxs': '300px',
+      'xxs': '360px',
+      'xs': '475px',
+      ...defaultTheme.screens,
     },
   },
   variants: {

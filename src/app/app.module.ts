@@ -9,14 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
+import { MaintenancePipe } from './pages/maintenance.pipe';
 
 export function playerFactory() {
   return import('lottie-web');
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, MaintenancePipe],
   imports: [
     AppRoutingModule,
     BrowserModule,

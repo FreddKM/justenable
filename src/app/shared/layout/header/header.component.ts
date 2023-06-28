@@ -25,6 +25,14 @@ export class HeaderComponent implements OnInit {
       title: 'NAVIGATION.ABOUT_US',
       url: '/about-us',
     },
+    {
+      title: 'NAVIGATION.AUTOMATION',
+      url: '/automation',
+    },
+    {
+      title: 'NAVIGATION.MAINTENANCE',
+      url: '/maintenance',
+    },
   ];
 
   languages = environment.languages;
