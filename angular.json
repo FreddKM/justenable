@@ -1,10 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "5da3b44b-05f8-4e00-9a0b-b4b125915d56"
-  },
   "version": 1,
-  "defaultProject": "just-enable",
   "newProjectRoot": "projects",
   "projects": {
     "just-enable": {
@@ -114,6 +110,18 @@
           }
         }
       }
+    }
+  },
+  "cli": {
+    "analytics": "5da3b44b-05f8-4e00-9a0b-b4b125915d56",
+    "schematicCollections": ["@ionic/angular-toolkit"]
+  },
+  "schematics": {
+    "@ionic/angular-toolkit:component": {
+      "styleext": "scss"
+    },
+    "@ionic/angular-toolkit:page": {
+      "styleext": "scss"
     }
   }
 }

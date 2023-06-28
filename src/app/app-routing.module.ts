@@ -27,6 +27,20 @@ const routes: Routes = [
       import('./pages/work/work.module').then((m) => m.WorkPageModule),
   },
   {
+    path: 'maintenance',
+    loadChildren: () =>
+      import('./pages/maintenance/maintenance.module').then(
+        (m) => m.MaintenancePageModule
+      ),
+  },
+  {
+    path: 'automation',
+    loadChildren: () =>
+      import('./pages/automation/automation.module').then(
+        (m) => m.AutomationPageModule
+      ),
+  },
+  {
     path: 'home',
     redirectTo: '',
     pathMatch: 'full',

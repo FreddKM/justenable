@@ -1,19 +1,18 @@
 div.navigation {
-  @apply relative flex justify-between border-b border-gray-100 bg-white dark:bg-gray-900;
+  @apply relative flex justify-between border-b border-gray-100 bg-white;
 
   > a {
     @apply ml-4 mr-8 my-auto;
 
     img {
-      @apply w-56;
+      @apply h-20 p-2;
     }
   }
 
   nav {
     @apply w-full flex justify-end;
     ul {
-      top: 52px;
-      @apply bg-white w-9/12 right-0 lg:w-full z-20 absolute lg:top-auto lg:static lg:flex flex-row justify-around max-w-screen-lg transition-transform translate-x-full lg:transform-none;
+      @apply bg-white w-9/12 right-0 lg:w-full z-20 absolute lg:top-auto lg:static lg:flex flex-row justify-around max-w-screen-lg transition-transform transform translate-x-full lg:transform-none top-[80px];
       li {
         @apply w-full;
         a {
