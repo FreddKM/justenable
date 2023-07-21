@@ -1,0 +1,44 @@
+<div class="navigation">
+  <a [routerLinkActiveOptions]="{ exact: true }"
+     routerDirection="root"
+     routerLink="/"
+     routerLinkActive="active-link">
+    <img alt="JE Logo" src="./assets/img/JE logo.jpg" />
+  </a>
+  <nav>
+    <ul [ngClass]="{ 'show-menu': showMenu }">
+      <li *ngFor="let nav of navigation">
+        <a [routerLink]="nav.url"
+           [routerLinkActiveOptions]="{ exact: true }"
+           routerDirection="root"
+           routerLinkActive="active-link">
+          {{ nav.title | translate }}
+        </a>
+      </li>
+    </ul>
+    <div class="language">
+      <div (click)="toggleLanguageList()"
+           (clickElsewhere)="hideLanguageList = true">
+        <h5>{{ selected }}</h5>
+        <ion-icon [ngClass]="{ rotate: !hideLanguageList }"
+                  color="medium"
+                  name="chevron-down">
+        </ion-icon>
+      </div>
+      <ul [ngClass]="{ hidden: hideLanguageList }">
+        <li (click)="setLanguage(lang)"
+            [ngClass]="{ selected: selected === lang }"
+            *ngFor="let lang of languages">
+          <h5>{{ "LANGUAGE." + lang | translate }}</h5>
+        </li>
+      </ul>
+    </div>
+    <div (click)="toggleMenu()"
+         (clickElsewhere)="showMenu = false"
+         class="menu-button">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</div>
