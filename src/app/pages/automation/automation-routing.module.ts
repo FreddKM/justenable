@@ -1,17 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { AutomationComponent } from './automation.component';
 
-import { AutomationPage } from './automation.page';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: AutomationPage
-  }
-];
+const routes: Routes = [{ path: '', component: AutomationComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AutomationPageRoutingModule {}
+export class AutomationRoutingModule {}

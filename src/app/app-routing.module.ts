@@ -1,61 +1,52 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomePageModule),
-  },
-  {
     path: 'about-us',
     loadChildren: () =>
-      import('./pages/about-us/about-us.module').then(
-        (m) => m.AboutUsPageModule
-      ),
-  },
-  {
-    path: 'services',
-    loadChildren: () =>
-      import('./pages/services/services.module').then(
-        (m) => m.ServicesPageModule
-      ),
-  },
-  {
-    path: 'work',
-    loadChildren: () =>
-      import('./pages/work/work.module').then((m) => m.WorkPageModule),
-  },
-  {
-    path: 'maintenance',
-    loadChildren: () =>
-      import('./pages/maintenance/maintenance.module').then(
-        (m) => m.MaintenancePageModule
-      ),
+      import('./pages/about-us/about-us.module').then((m) => m.AboutUsModule),
   },
   {
     path: 'automation',
     loadChildren: () =>
       import('./pages/automation/automation.module').then(
-        (m) => m.AutomationPageModule
+        (m) => m.AutomationModule
       ),
   },
   {
-    path: 'home',
-    redirectTo: '',
-    pathMatch: 'full',
+    path: '',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: '**',
-    redirectTo: '',
-    pathMatch: 'full',
+    path: 'maintenance',
+    loadChildren: () =>
+      import('./pages/maintenance/maintenance.module').then(
+        (m) => m.MaintenanceModule
+      ),
+  },
+  {
+    path: 'services',
+    loadChildren: () =>
+      import('./pages/services/services.module').then((m) => m.ServicesModule),
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./pages/contact-us/contact-us.module').then(
+        (m) => m.ContactUsModule
+      ),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./pages/products/products.module').then((m) => m.ProductsModule),
   },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

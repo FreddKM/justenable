@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { ServicesPageRoutingModule } from './services-routing.module';
-import { ServicesPage } from './services.page';
+import { CommonModule } from '@angular/common';
+
+import { ServicesRoutingModule } from './services-routing.module';
+import { ServicesComponent } from './services.component';
 
 @NgModule({
-  imports: [SharedModule, ServicesPageRoutingModule],
-  declarations: [ServicesPage],
+  declarations: [ServicesComponent],
+  imports: [CommonModule, ServicesRoutingModule],
 })
-export class ServicesPageModule {}
+export class ServicesModule {}
