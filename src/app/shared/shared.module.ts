@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { LottieModule } from 'ngx-lottie';
 import { ClickElsewhereDirective } from '../directives/click-elsewhere.directive';
-import { GoogleMapsModule } from '@angular/google-maps';
-// import { SwiperModule } from 'swiper/angular'; // Make sure to import from 'swiper/angular'
 
 @NgModule({
   declarations: [ClickElsewhereDirective],
@@ -19,7 +17,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    GoogleMapsModule,
     HttpClientJsonpModule,
   ],
 
@@ -32,7 +29,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ReactiveFormsModule,
     RouterModule,
     ClickElsewhereDirective,
-    GoogleMapsModule,
     HttpClientJsonpModule,
   ],
 })
