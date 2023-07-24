@@ -1,0 +1,71 @@
+<div class="max-w-screen-xl mx-auto container px-6 py-10 relative grid xl:grid-cols-2 text-center xl:text-left md:justify-center">
+    <section class="text-gray-500 font-thin">
+        <h1 class="text-4xl lg:text-6xl xl:mt-24">
+            {{ 'HOME.TITLE' | translate }}
+        </h1>
+        <h2 class="uppercase text-orange-500 sm:mb-10">
+            {{ 'HOME.SUBTITLE' | translate }}
+        </h2>
+    </section>
+    <div class="grid flex-row justify-items-end">
+        <ng-lottie [options]="options"></ng-lottie>
+    </div>
+</div>
+<div class="py-14 px-4 bg-slate-100">
+    <h1 class="mb-8 mx-auto w-fit font-semibold text-4xl">
+        {{ 'GLOBAL.SERVICES_WE_PROVIDE' | translate}}
+    </h1>
+    <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-6">
+        <ng-container *ngFor="let svc of services">
+            <ng-container *ngTemplateOutlet="service; context: { service: svc }">
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<div class="py-10 px-4 bg-slate-50">
+    <div class="max-w-screen-xl mx-auto">
+        <h1 class="mb-8 mx-auto w-fit font-medium text-3xl">
+            {{ 'GLOBAL.INDUSTRIES' | translate}}
+        </h1>
+        <swiper-container autoplay-delay="5000"
+                          autoplay-pause-on-mouse-enter="true"
+                          class="flex items-center mx-aut"
+                          loop="true"
+                          navigation="true"
+                          slides-per-view="1"
+                          speed="1000"
+                          virtual="true">
+            <swiper-slide *ngFor="let ind of industries"
+                          class="text-center"
+                          lazy="true">
+                <ng-container *ngTemplateOutlet="industry; context: { industry: ind }">
+                </ng-container>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+</div>
+
+<ng-template #service let-service="service">
+    <div class="shadow-sm rounded-md overflow-hidden bg-white flex flex-col">
+        <div class="w-full h-52 overflow-hidden bg-cover bg-no-repeat bg-center"
+             style="background-image: url('{{service.coverImage}}')">
+        </div>
+        <div class="px-4 py-2">
+            <h1 class="text-xl py-1">
+                {{ 'GLOBAL.' + service.title | translate }}
+            </h1>
+            <p class="text-lg text-gray-500 font-light">
+                {{ 'GLOBAL.' + service.description + '_DESCRIPTION' | translate }}
+            </p>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #industry let-industry="industry">
+    <div>
+        <h1 class="text-2xl font-thin tracking-widest text-gray-500">
+            {{ 'GLOBAL.' + industry.name | translate }}
+        </h1>
+    </div>
+</ng-template>

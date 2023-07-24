@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-
-import { AutomationPageRoutingModule } from './automation-routing.module';
-
 import { SharedModule } from 'src/app/shared/shared.module';
-import { AutomationPage } from './automation.page';
+import { AutomationRoutingModule } from './automation-routing.module';
+import { AutomationComponent } from './automation.component';
 
 @NgModule({
-  imports: [AutomationPageRoutingModule, SharedModule],
-  declarations: [AutomationPage],
+  declarations: [AutomationComponent],
+  imports: [AutomationRoutingModule, SharedModule],
 })
-export class AutomationPageModule {}
+export class AutomationModule {}

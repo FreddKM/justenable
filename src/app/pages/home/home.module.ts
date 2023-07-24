@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
-import { HomePageRoutingModule } from './home-routing.module';
-import { HomePage } from './home.page';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
-  imports: [HomePageRoutingModule, SharedModule],
-  declarations: [HomePage],
+  declarations: [HomeComponent],
+  imports: [HomeRoutingModule, SharedModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomePageModule {}
+export class HomeModule {}

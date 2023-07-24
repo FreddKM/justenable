@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-
-import { MaintenancePageRoutingModule } from './maintenance-routing.module';
-
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MaintenancePage } from './maintenance.page';
+import { MaintenanceRoutingModule } from './maintenance-routing.module';
+import { MaintenanceComponent } from './maintenance.component';
 
 @NgModule({
-  imports: [SharedModule, MaintenancePageRoutingModule],
-  declarations: [MaintenancePage],
+  declarations: [MaintenanceComponent],
+  imports: [MaintenanceRoutingModule, SharedModule],
 })
-export class MaintenancePageModule {}
+export class MaintenanceModule {}

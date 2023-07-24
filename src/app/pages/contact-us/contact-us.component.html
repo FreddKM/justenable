@@ -1,0 +1,39 @@
+<div class="px-4 py-16 bg-gradient-to-tr from-rose-500 to-amber-500">
+    <h1 class="text-4xl text-gray-50 mb-8 uppercase">
+        {{ 'NAVIGATION.CONTACT_US' | translate }}
+    </h1>
+    <div class="max-w-screen-xl shadow-md rounded bg-gray-50 space-y-4 p-8">
+        <div>
+            <h1 class="font-extralight text-2xl">
+                <span class="font-medium">
+                    {{ 'GLOBAL.EMAIL' | translate }}:
+                </span>
+                <a href="mailto:{{ email }}">{{ email }}</a>
+            </h1>
+        </div>
+        <div>
+            <h1 class="font-extralight text-2xl">
+                <span class="font-medium">
+                    {{ 'GLOBAL.PHONE' | translate }}:
+                </span>
+                <a href="tel:{{ phone }}">{{ phone }}</a>
+            </h1>
+        </div>
+        <div>
+            <h1 class="font-extralight text-2xl">
+                <span class="font-medium">
+                    {{ 'GLOBAL.MOBILE' | translate }}:
+                </span>
+                <a href="tel:{{ mobile }}">{{ mobile }}</a>
+            </h1>
+        </div>
+        <div>
+            <h1 class="font-extralight text-2xl">
+                <span class="font-medium">
+                    {{ 'GLOBAL.LOCATION' | translate }}:
+                </span>
+                <a href="{{ locationLink }}" target="_blank">{{ location }}</a>
+            </h1>
+        </div>
+    </div>
+</div>
